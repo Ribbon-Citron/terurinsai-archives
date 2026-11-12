@@ -1,0 +1,54 @@
+
+---
+import SocialLinks from "./SocialLinks.astro";
+import { siteInfo } from "../data/site";
+---
+
+<footer class="footer">
+  <div class="container">
+
+    <SocialLinks />
+
+    <div class="contact">
+      <h2>お問い合わせ</h2>
+      <p>主催：{siteInfo.organizer}</p>
+      <p>住所：{siteInfo.address}</p>
+      <p>電話：{siteInfo.phone}</p>
+    </div>
+
+    <div class="copyright">
+      © TERURINSAI
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #f0efef;
+    border-top: 1px solid #e5e5e5;
+    padding: 40px 0 24px;
+    color: #555;
+    font-size: 13px;
+  }
+
+  .contact {
+    margin-bottom: 32px;
+  }
+
+  .contact h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contact p {
+    margin: 5px 0;
+  }
+
+  .copyright {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>

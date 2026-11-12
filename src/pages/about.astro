@@ -1,0 +1,86 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteInfo } from "../data/site";
+---
+
+<BaseLayout title="てるりん祭について">
+  <main class="container about">
+    <h1>てるりん祭について</h1>
+
+    <section>
+      <h2>祭りの趣旨</h2>
+      <p>
+        コザ・てるりん祭は、照屋林助(てるりん)をはじめ、
+        沖縄の芸能や文化を築いてこられた先輩方への感謝を込めて開催するお祭りです。
+      </p>
+      <p>
+        先人たちが大切にしてきた芸能や文化を次の世代へと継承し、
+        音楽や芸能を通じて地域の人々が交流し、
+        コザの街を盛り上げていくことを目指しています。
+      </p>
+    </section>
+
+    <section>
+      <h2>企画・開催</h2>
+      <p>企画：照屋林助の次男・林次郎</p>
+      <p>主催：{siteInfo.organizer}</p>
+      <p>会場：沖縄市中央・中央パークアベニュー</p>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>住所：{siteInfo.address}</p>
+      <p>電話：{siteInfo.phone}</p>
+    </section>
+
+    <a href="/" class="back-link">開催記録一覧へ戻る</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .about {
+    max-width: 800px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  section {
+    margin-bottom: 36px;
+  }
+
+  h2 {
+    font-size: 19px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+  }
+
+  p {
+    line-height: 1.9;
+    margin: 0 0 12px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #555;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .about {
+      padding-top: 32px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+  }
+</style>

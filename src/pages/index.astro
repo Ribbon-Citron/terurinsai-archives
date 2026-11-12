@@ -1,16 +1,130 @@
+
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { festivals } from "../data/festivals";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">KOZA TERURINSAI</p>
+      <h1>コザ・てるりん祭</h1>
+      <p class="lead">
+        これまでの開催記録と、祭りの思い出を未来へ。
+      </p>
+      <a href="/about/" class="about-link">てるりん祭について</a>
+    </div>
+  </section>
+
+  <section class="container section">
+    <h2 class="section-title">開催アーカイブ</h2>
+
+    <div class="festival-grid">
+      {festivals.map((festival) => (
+        <a
+          href={`/archive/${festival.id}/`}
+          class="festival-card"
+        >
+          <div class="poster">
+            <img
+              src={festival.poster}
+              alt={festival.title}
+            />
+          </div>
+          <h3>{festival.title}</h3>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero {
+    background: #f0eeee;
+    padding: 90px 0;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #888;
+  }
+
+  h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 12px 0;
+    font-weight: 800;
+  }
+
+  .lead {
+    color: #666;
+    font-size: 15px;
+  }
+
+  .about-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .festival-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    justify-content: center;
+    gap: 32px 10px;
+  }
+
+  .festival-card {
+    width: 160px;
+    min-width: 0;
+  }
+
+  .poster {
+    width: 160px;
+    height: 213px;
+    background: #eeeeee;
+    overflow: hidden;
+  }
+
+  .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .festival-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 0;
+    text-align: center;
+  }
+
+  .festival-card:hover img {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 600px) {
+    .festival-grid {
+      grid-template-columns: repeat(2, 160px);
+      justify-content: center;
+      gap: 24px 10px;
+    }
+
+    .festival-card {
+      width: 160px;
+    }
+
+    .festival-card h3 {
+      font-size: 12px;
+    }
+
+    .hero {
+      padding: 64px 0;
+    }
+  }
+</style>
