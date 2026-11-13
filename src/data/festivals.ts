@@ -21,7 +21,7 @@ export interface Festival {
 const createFestival = (id: number): Festival => ({
   id,
   title: `第${id}回 コザ･てるりん祭`,
-  titleTop: `第${id}回`,  
+  titleTop: `第${id}回`,
   poster: `/images/posters/sample${id}.jpg`,
   year: "",
   date: "",
@@ -43,7 +43,7 @@ export const festivals: Festival[] = Array.from(
     const id = 15 - index;
     const festival = createFestival(id);
 
-//  第15回【2026】
+    //  第15回【2026】
     if (id === 15) {
       return {
         ...festival,
@@ -69,12 +69,12 @@ export const festivals: Festival[] = Array.from(
       };
     }
 
-//  第15回【2026】
+    //  第14回【2025】
     if (id === 14) {
       return {
         ...festival,
         year: "2025",
-        date: "年9月27日(日)",
+        date: "年 9月27日(日)",
         time: "15:00～21:00",
         venue: "沖縄市:中央パークアベニュー",
         performers: [
@@ -95,6 +95,31 @@ export const festivals: Festival[] = Array.from(
       };
     }
 
+    //  第1回【2009】
+    if (id === 1) {
+      return {
+        ...festival,
+        year: "2009",
+        date: "年 9月27日(日)",
+        time: "15:00～21:00",
+        venue: "沖縄市:中央パークアベニュー",
+        performers: [
+          "りんけんバンド、知名定男、仲本興次、玉栄政昭、大工哲弘、田場盛信、神谷幸一、徳原清文、松田弘一、前川守賢、新良幸人、よなは徹、松田一利、仲宗根創、知名定人、島袋辰也、喜友名ともき、HIKARI、とぅるるんてん、大城美佐子、饒辺勝子、山里ユキ、金城恵子、饒辺愛子、我如古より子、知念こずえ、Hirara、村吉茜、ティンクティンク、たぁーちゅ、園田青年会、玉城満(司会)、藤木勇人(司会)、みーちゅう(司会)",
+        ],
+        description: "説明：バスでお越しの場合は胡屋が最寄バス停です。",
+        visitors: "1,323人",
+        income: "11,300円",
+        expenses: "50,000円",
+        additionalImages: [
+          "/images/sampleA.jpg",
+        ],
+        additionalText: "説明：駐車場は近隣に公共駐車場(無料)や有料駐車場があります。",
+        gallery: [
+          "/images/sampleC.jpg",
+          "/images/sampleB.jpg",
+        ],
+      };
+    }
 
     return festival;
   }

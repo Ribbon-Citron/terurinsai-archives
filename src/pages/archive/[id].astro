@@ -112,33 +112,37 @@ const hasRecords =
     color: #777;
   } */
 
-  .festival-detail {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 40px;
-    align-items: start;
-  }
+.festival-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
 
-  .main-poster {
-    background: #f0f0f0;
-    text-align: center;
-    min-width: 0;
-  }
+.main-poster {
+  min-width: 0;
+  background: #f0f0f0;
+  text-align: center;
+}
 
-  .main-poster img {
-    width: 452px;
-    height: 640px;
-    object-fit: contain;
-    border-radius: 16px;
-  }
+.main-poster img {
+  display: block;
+  width: 100%;
+  max-width: 452px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 16px;
+}
 
+.information {
+  min-width: 0;
+}
   .information h1 {
     margin: 0 0 20px 0;
     font-size: 1.2rem;
     line-height: 1.5;
   }
 
-  .information,
   .information p,
   .record-list p,
   .additional-text  {
@@ -203,6 +207,7 @@ const hasRecords =
   }
 
   @media (max-width: 600px) {
+    .festival-detail,
     .additional-layout {
       grid-template-columns: 1fr;
       gap: 16px;
@@ -212,10 +217,10 @@ const hasRecords =
     grid-template-columns: 1fr;
     }
 
-    .festival-detail {
+    /* .festival-detail {
       grid-template-columns: 1fr;
       gap: 20px;
-    }
+    } */
 
     .main-poster img {
       max-height: none;
