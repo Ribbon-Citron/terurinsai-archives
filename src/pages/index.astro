@@ -5,20 +5,9 @@ import { festivals } from "../data/festivals";
 ---
 
 <BaseLayout>
-  <section class="hero">
-    <div class="container">
-      <p class="eyebrow">KOZA TERURINSAI</p>
-      <h1>コザ・てるりん祭 TEST</h1>
-      <p class="lead">
-        これまでの開催記録と、祭りの思い出を未来へ。
-      </p>
-      <a href="/about/" class="about-link">てるりん祭について</a>
-    </div>
-  </section>
 
   <section class="container section">
-    <h2 class="section-title">開催アーカイブ</h2>
-
+    <div class="section-title">ポスター,出演者,写真など お祭りの豊かな歴史を物語る数々の資料</div>
     <div class="festival-grid">
       {festivals.map((festival) => (
         <a
@@ -40,29 +29,30 @@ import { festivals } from "../data/festivals";
 </BaseLayout>
 
 <style>
-  .hero {
+  /* .hero {
     background: #f0eeee;
     padding: 90px 0;
     text-align: center;
-  }
+  } */
 
-  .eyebrow {
+  /* .eyebrow {
     font-size: 12px;
     letter-spacing: 0.2em;
     color: #888;
-  }
+  } */
 
-  h1 {
-    font-size: clamp(32px, 5vw, 52px);
-    margin: 12px 0;
+  /* h2 {
     font-weight: 800;
-  }
+    text-align: center;
+  } */
 
-  .lead {
-    color: #666;
-    font-size: 15px;
+  .section-title {
+    /* font-weight: 800; */
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
   }
-
+/* 
   .about-link {
     display: inline-block;
     margin-top: 20px;
@@ -70,13 +60,13 @@ import { festivals } from "../data/festivals";
     font-size: 14px;
     text-decoration: underline;
     text-underline-offset: 4px;
-  }
+  } */
 
   .festival-grid {
     display: grid;
     grid-template-columns: repeat(4, 160px);
     justify-content: center;
-    gap: 32px 10px;
+    gap: 20px 10px;
   }
 
   .festival-card {
@@ -86,9 +76,11 @@ import { festivals } from "../data/festivals";
 
   .poster {
     width: 160px;
-    height: 213px;
-    background: #eeeeee;
+    height: 226px;
+    /* background: #000000; */
     overflow: hidden;
+    border-radius: 8px;
+    /* border: 0px solid #64605f; */
   }
 
   .poster img {
@@ -98,9 +90,9 @@ import { festivals } from "../data/festivals";
   }
 
   .festival-card h3 {
-    font-size: 14px;
+    font-size: 0.7rem;
     font-weight: 600;
-    margin: 10px 0 0;
+    margin: 0;
     text-align: center;
   }
 
@@ -112,7 +104,7 @@ import { festivals } from "../data/festivals";
     .festival-grid {
       grid-template-columns: repeat(2, 160px);
       justify-content: center;
-      gap: 24px 10px;
+      gap: 20px 10px;
     }
 
     .festival-card {
@@ -120,11 +112,11 @@ import { festivals } from "../data/festivals";
     }
 
     .festival-card h3 {
-      font-size: 12px;
+      font-size: 0.7rem;
     }
 
-    .hero {
+    /* .hero {
       padding: 64px 0;
-    }
+    } */
   }
 </style>
