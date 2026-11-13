@@ -20,7 +20,7 @@ import { festivals } from "../data/festivals";
               alt={festival.title}
             />
           </div>
-          <h3>{festival.title}</h3>
+          <h3>{festival.titleTop}【{festival.year}】</h3>
         </a>
       ))}
     </div>
@@ -64,7 +64,7 @@ import { festivals } from "../data/festivals";
 
   .festival-grid {
     display: grid;
-    grid-template-columns: repeat(4, 160px);
+    grid-template-columns: repeat(5, 160px);
     justify-content: center;
     gap: 20px 10px;
   }
@@ -90,7 +90,7 @@ import { festivals } from "../data/festivals";
   }
 
   .festival-card h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
     margin: 0;
     text-align: center;

@@ -4,6 +4,6 @@ export const siteInfo = {
   xUrl: "https://x.com/terurinsai",
 
   organizer: "てるりん祭実行委員会",
-  address: "沖縄市中央3-3-3 Art KOZA",
-  phone: "090-6861-3434",
+  address: "沖縄市",
+  phone: "090-0000-0000",
 };
