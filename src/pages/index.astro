@@ -119,4 +119,24 @@ import { festivals } from "../data/festivals";
       padding: 64px 0;
     } */
   }
+ 
+  @media (max-width: 900px) {
+    .festival-grid {
+      grid-template-columns: repeat(4, 160px);
+      justify-content: center;
+      gap: 20px 10px;
+    }
+
+    .festival-card {
+      width: 160px;
+    }
+
+    .festival-card h3 {
+      font-size: 0.7rem;
+    }
+
+    /* .hero {
+      padding: 64px 0;
+    } */
+  }
 </style>
