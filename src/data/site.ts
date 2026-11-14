@@ -1,4 +1,3 @@
-
 export const siteInfo = {
   facebookUrl: "https://www.facebook.com/terurinsai",
   xUrl: "https://x.com/terurinsai",

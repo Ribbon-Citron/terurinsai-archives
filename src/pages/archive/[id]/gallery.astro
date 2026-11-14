@@ -1,0 +1,300 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { festivals } from "../../../data/festivals";
+import { getGalleryImages } from "../../../lib/gallery";
+
+export async function getStaticPaths() {
+  return Promise.all(
+    festivals.map(async (festival) => ({
+      params: { id: String(festival.id) },
+      props: {
+        festival,
+        images: await getGalleryImages(String(festival.id).padStart(2, "0")),
+      },
+    })),
+  );
+}
+
+const { festival, images } = Astro.props;
+---
+
+<BaseLayout title={`${festival.title} 写真ギャラリー`}>
+  <main class="container">
+    <a class="back-link" href={`/archive/${festival.id}/`}>
+      ← 開催回ページに戻る
+    </a>
+    <h1>{festival.title} 写真ギャラリー</h1>
+
+    <p class="count">{images.length}枚の写真</p>
+
+    <div class="gallery-grid">
+      {images.map((image, index) => (
+        <img
+          src={image.thumbnail}
+          alt={`${festival.title} 写真 ${index + 1}`}
+          loading="lazy"
+          data-original={image.original}
+          data-index={index}
+        />
+      ))}
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close" id="close" aria-label="閉じる">
+      ×
+    </button>
+    <button class="prev" id="prev" aria-label="前の写真">
+      ‹
+    </button>
+    <img id="lightbox-image" src="" alt="" />
+    <button class="next" id="next" aria-label="次の写真">
+      ›
+    </button>
+    <p class="photo-count" id="photo-count"></p>
+  </div>
+</BaseLayout>
+
+<script>
+  const thumbnails = Array.from(
+    document.querySelectorAll<HTMLImageElement>(".gallery-grid img"),
+  );
+
+  const lightbox = document.querySelector<HTMLDivElement>("#lightbox")!;
+  const lightboxImage =
+    document.querySelector<HTMLImageElement>("#lightbox-image")!;
+  const closeButton = document.querySelector<HTMLButtonElement>("#close")!;
+  const prevButton = document.querySelector<HTMLButtonElement>("#prev")!;
+  const nextButton = document.querySelector<HTMLButtonElement>("#next")!;
+  const photoCount =
+    document.querySelector<HTMLParagraphElement>("#photo-count")!;
+
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  function showImage(index: number) {
+    currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+    const thumbnail = thumbnails[currentIndex];
+
+    lightboxImage.src = thumbnail.dataset.original!;
+    lightboxImage.alt = thumbnail.alt;
+    photoCount.textContent = `${currentIndex + 1} / ${thumbnails.length}`;
+  }
+
+  function openLightbox(index: number) {
+    showImage(index);
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
+  }
+
+  function showPrev() {
+    showImage(currentIndex - 1);
+  }
+
+  function showNext() {
+    showImage(currentIndex + 1);
+  }
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      openLightbox(index);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+  prevButton.addEventListener("click", showPrev);
+  nextButton.addEventListener("click", showNext);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("active")) return;
+
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") showPrev();
+    if (event.key === "ArrowRight") showNext();
+  });
+
+  lightbox.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+    },
+    { passive: true },
+  );
+
+  lightbox.addEventListener(
+    "touchend",
+    (event) => {
+      const touchEndX = event.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+
+      if (Math.abs(diff) < 50) return;
+
+      if (diff > 0) {
+        showPrev();
+      } else {
+        showNext();
+      }
+    },
+    { passive: true },
+  );
+</script>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .count {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .gallery-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 60px 70px;
+  }
+
+  .lightbox.active {
+    display: flex;
+  }
+
+  #lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .lightbox button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+  }
+
+  .close {
+    top: 15px;
+    right: 25px;
+    font-size: 42px;
+  }
+
+  .prev,
+  .next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 64px;
+    padding: 10px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .photo-count {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .gallery-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .lightbox {
+      padding: 50px 12px;
+    }
+
+    .prev,
+    .next {
+      font-size: 44px;
+      padding: 5px;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .close {
+      top: 10px;
+      right: 15px;
+    }
+  }
+</style>

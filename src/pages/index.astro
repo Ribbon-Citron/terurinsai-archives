@@ -1,66 +1,33 @@
-
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { festivals } from "../data/festivals";
 ---
 
 <BaseLayout>
-
   <section class="container section">
     <div class="section-title">お祭りの豊かな歴史を物語る数々の資料</div>
     <div class="festival-grid">
       {festivals.map((festival) => (
-        <a
-          href={`/archive/${festival.id}/`}
-          class="festival-card"
-        >
+        <a href={`/archive/${festival.id}/`} class="festival-card">
           <div class="poster">
-            <img
-              src={festival.poster}
-              alt={festival.title}
-            />
+            <img src={festival.poster} alt={festival.title} />
           </div>
-          <h3>{festival.titleTop}【{festival.year}】</h3>
+          <h3>
+            {festival.titleTop}【{festival.year}】
+          </h3>
         </a>
       ))}
     </div>
   </section>
-
 </BaseLayout>
 
 <style>
-  /* .hero {
-    background: #f0eeee;
-    padding: 90px 0;
-    text-align: center;
-  } */
-
-  /* .eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    color: #888;
-  } */
-
-  /* h2 {
-    font-weight: 800;
-    text-align: center;
-  } */
-
   .section-title {
     /* font-weight: 800; */
     text-align: center;
     font-size: 0.8rem;
     color: #555;
   }
-/* 
-  .about-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: #555;
-    font-size: 14px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  } */
 
   .festival-grid {
     display: grid;
@@ -119,7 +86,7 @@ import { festivals } from "../data/festivals";
       padding: 64px 0;
     } */
   }
- 
+
   @media (max-width: 900px) {
     .festival-grid {
       grid-template-columns: repeat(4, 160px);
