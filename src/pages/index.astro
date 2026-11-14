@@ -5,7 +5,7 @@ import { festivals } from "../data/festivals";
 
 <BaseLayout>
   <section class="container section">
-    <div class="section-title">お祭りの豊かな歴史を物語る数々の資料</div>
+    <!-- <div class="section-title">お祭りの豊かな歴史を物語る数々の資料</div> -->
     <div class="festival-grid">
       {festivals.map((festival) => (
         <a href={`/archive/${festival.id}/`} class="festival-card">
@@ -23,7 +23,6 @@ import { festivals } from "../data/festivals";
 
 <style>
   .section-title {
-    /* font-weight: 800; */
     text-align: center;
     font-size: 0.8rem;
     color: #555;
@@ -68,6 +67,11 @@ import { festivals } from "../data/festivals";
   }
 
   @media (max-width: 600px) {
+    .section-title {
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+    }
     .festival-grid {
       grid-template-columns: repeat(2, 160px);
       justify-content: center;
@@ -79,15 +83,16 @@ import { festivals } from "../data/festivals";
     }
 
     .festival-card h3 {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
-
-    /* .hero {
-      padding: 64px 0;
-    } */
   }
 
-  @media (max-width: 900px) {
+  @media (min-width: 601px) and (max-width: 900px) {
+    .section-title {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
     .festival-grid {
       grid-template-columns: repeat(4, 160px);
       justify-content: center;
@@ -99,11 +104,7 @@ import { festivals } from "../data/festivals";
     }
 
     .festival-card h3 {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
-
-    /* .hero {
-      padding: 64px 0;
-    } */
   }
 </style>

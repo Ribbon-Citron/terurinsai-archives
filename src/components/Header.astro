@@ -2,7 +2,7 @@
   <div class="container header-inner">
     <a href="/" class="logo">
       <span class="logo-main">コザ･てるりん祭 Archives</span>
-      <span class="logo-sub">⚠️当サイトは構築中の暫定内容⚠️</span>
+      <span class="logo-sub">⚠️構築中で内容は暫定⚠️</span>
     </a>
   </div>
 </header>
@@ -10,8 +10,9 @@
 <style>
   .header {
     color: #e4dede;
-    background: #222222;
-    border-bottom: 3px solid #791313;
+    background: #555555;
+    border-bottom: 0px solid #791313;
+    margin-bottom: 20px; /* 下に20pxの余白を追加 */
   }
 
   .header-inner {
@@ -32,12 +33,11 @@
     font-size: 1.4rem;
     font-weight: 800;
     color: #dad9cc;
-    /* letter-spacing: 0.05em; */
   }
 
   .logo-sub {
     font-size: 1rem;
-    color: #ff0000;
+    color: #ee2222;
   }
 
   nav {
@@ -51,14 +51,18 @@
   }
 
   @media (max-width: 600px) {
+    .header {
+      margin-bottom: 0px; /* 下に20pxの余白を追加 */
+    }
+
     .header-inner {
-      min-height: 76px;
+      min-height: 50px;
       flex-wrap: wrap;
-      padding: 12px 0;
+      padding: 1% 0;
     }
 
     .logo-main {
-      font-size: 19px;
+      font-size: 1.2rem;
     }
 
     nav {

@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 const { festival } = Astro.props;
 
-const hasRecords = festival.visitors || festival.income || festival.expenses;
+const hasRecords = festival.visitors || festival.cashflow || festival.donation;
 ---
 
 <BaseLayout title={`${festival.title}｜コザ･てるりん祭`}>
@@ -49,8 +49,8 @@ const hasRecords = festival.visitors || festival.income || festival.expenses;
         <h2>開催記録</h2>
         <div class="record-list">
           {festival.visitors && <p>来場者数：{festival.visitors}</p>}
-          {festival.income && <p>収入：{festival.income}</p>}
-          {festival.expenses && <p>支出：{festival.expenses}</p>}
+          {festival.cashflow && <p>収支：{festival.cashflow}</p>}
+          {festival.donation && <p>寄付：{festival.donation}</p>}
         </div>
       </section>
     )}
@@ -77,33 +77,26 @@ const hasRecords = festival.visitors || festival.income || festival.expenses;
     )}
 
     {festival.gallery.length > 0 && (
-      <>
-        <section class="gallery">
-          <h2>ギャラリー</h2>
-          <div class="gallery-grid">
-            {festival.gallery.map((photo) => (
-              <img src={photo} alt={`${festival.title}の写真`} loading="lazy" />
-            ))}
-          </div>
-        </section>
-        <section class="photo-archive">
+      <section class="gallery">
+        <h2>写真</h2>
+
+        <p class="photo-archive">
           <a href={`/archive/${festival.id}/gallery/`}>
             写真ギャラリーを見る →
           </a>
-        </section>
-      </>
+        </p>
+
+        <div class="gallery-grid">
+          {festival.gallery.map((photo) => (
+            <img src={photo} alt={`${festival.title}の写真`} loading="lazy" />
+          ))}
+        </div>
+      </section>
     )}
   </section>
 </BaseLayout>
 
 <style>
-  /* .back-link {
-      display: inline-block;
-      margin-bottom: 28px;
-      font-size: 13px;
-      color: #777;
-    } */
-
   .festival-detail {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -198,23 +191,23 @@ const hasRecords = festival.visitors || festival.income || festival.expenses;
     height: auto;
   }
   .photo-archive {
-    margin-top: 64px;
+    margin: 20px 0 20px;
     text-align: center;
   }
 
   .photo-archive a {
     display: inline-block;
-    padding: 12px 32px;
+    padding: 6px 16px;
     border: 1px solid #bbb;
     border-radius: 4px;
     color: #444;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-decoration: none;
     transition: background 0.2s;
   }
 
   .photo-archive a:hover {
-    background: #f0f0f0;
+    background: #bbeeee;
   }
 
   @media (max-width: 600px) {

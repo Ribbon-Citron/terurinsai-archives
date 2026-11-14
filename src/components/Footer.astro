@@ -7,12 +7,12 @@ import { siteInfo } from "../data/site";
   <div class="container">
     <SocialLinks />
 
-    <div class="contact">
+    <!-- <div class="contact">
       <h2>お問い合わせ</h2>
       <p>主催：{siteInfo.organizer}</p>
       <p>住所：{siteInfo.address}</p>
       <p>電話：{siteInfo.phone}</p>
-    </div>
+    </div> -->
 
     <div class="copyright">© てるりん祭実行委員会 2009</div>
   </div>
@@ -20,11 +20,12 @@ import { siteInfo } from "../data/site";
 
 <style>
   .footer {
-    background: #222222;
-    border-top: 3px solid #791313;
+    background: #555555;
+    border-top: 0px solid #791313;
     padding: 0;
     color: #f0e6e6;
     font-size: 0.8rem;
+    margin-top: 20px;
   }
 
   .contact {
@@ -41,8 +42,10 @@ import { siteInfo } from "../data/site";
   }
 
   .copyright {
-    padding: 10px 0 10px;
-    border-top: 1px solid #ddd;
+    color: #ccc;
+    padding: 8px 0 10px;
+    border-top: 1px solid #888;
+    margin-top: 20px;
     font-size: 0.8rem;
     text-align: center;
   }
