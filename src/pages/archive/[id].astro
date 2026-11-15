@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { festivals } from "../../data/festivals";
+import type { Festival } from "../../data/festivals";
 
 export function getStaticPaths() {
   return festivals.map((festival) => ({
@@ -9,9 +10,12 @@ export function getStaticPaths() {
   }));
 }
 
-const { festival } = Astro.props;
-
-const hasRecords = festival.visitors || festival.cashflow || festival.donation;
+const { festival } = Astro.props as { festival: Festival };
+const hasRecords =
+  festival.visitors ||
+  festival.weather ||
+  festival.cashflow ||
+  festival.donation;
 ---
 
 <BaseLayout title={`${festival.title}｜コザ･てるりん祭`}>
@@ -49,6 +53,7 @@ const hasRecords = festival.visitors || festival.cashflow || festival.donation;
         <h2>開催記録</h2>
         <div class="record-list">
           {festival.visitors && <p>来場者数：{festival.visitors}</p>}
+          {festival.weather && <p>天気：{festival.weather}</p>}
           {festival.cashflow && <p>収支：{festival.cashflow}</p>}
           {festival.donation && <p>寄付：{festival.donation}</p>}
         </div>
@@ -68,7 +73,6 @@ const hasRecords = festival.visitors || festival.cashflow || festival.donation;
               />
             ))}
           </div>
-
           {festival.additionalText && (
             <div class="additional-text">{festival.additionalText}</div>
           )}
@@ -81,9 +85,7 @@ const hasRecords = festival.visitors || festival.cashflow || festival.donation;
         <h2>写真</h2>
 
         <p class="photo-archive">
-          <a href={`/archive/${festival.id}/gallery/`}>
-            写真ギャラリーを見る →
-          </a>
+          <a href={`/archive/${festival.id}/gallery/`}>写真一覧を見る →</a>
         </p>
 
         <div class="gallery-grid">
@@ -139,7 +141,8 @@ const hasRecords = festival.visitors || festival.cashflow || festival.donation;
   .records,
   .additional,
   .gallery {
-    margin-top: 64px;
+    width: 95%;
+    margin: 64px auto;
   }
 
   .records h2,
@@ -150,46 +153,40 @@ const hasRecords = festival.visitors || festival.cashflow || festival.donation;
     padding-bottom: 2px;
     margin-bottom: 8px;
   }
-  /*
-    .record-list p {
-      font-size: 0.7rem;
-      margin: 1px 0;
-    } */
 
   .additional-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
   }
 
   .additional-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0fr, 1fr);
     gap: 20px;
     align-items: start;
   }
 
   .additional-grid img {
     display: block;
-    width: 100%;
+    max-width: 260px;
     height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
   }
 
-  /* .additional-text {
-      line-height: 1.9;
-      white-space: pre-line;
-    } */
-
   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
   }
 
   .gallery-grid img {
     width: 100%;
-    height: auto;
+    max-width: 452px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 8px;
   }
+
   .photo-archive {
     margin: 20px 0 20px;
     text-align: center;
@@ -207,46 +204,61 @@ const hasRecords = festival.visitors || festival.cashflow || festival.donation;
   }
 
   .photo-archive a:hover {
-    background: #bbeeee;
+    background: #eeeeee;
   }
 
-  @media (max-width: 600px) {
-    .festival-detail,
-    .additional-layout {
-      grid-template-columns: 1fr;
+  @media (max-width: 900px) {
+    .additional-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .additional-grid {
-      grid-template-columns: 1fr;
+    .additional-grid img {
+      display: block;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 8px;
     }
 
-    /* .festival-detail {
+    @media (max-width: 600px) {
+      .festival-detail,
+      .additional-layout {
         grid-template-columns: 1fr;
-        gap: 20px;
-      } */
+        gap: 16px;
+      }
 
-    .main-poster img {
-      max-height: none;
-    }
+      .additional-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
 
-    .information h1 {
-      font-size: 21px;
-      margin-bottom: 14px;
-    }
+      .additional-grid img {
+        max-width: 300px;
+      }
+      .main-poster img {
+        max-height: none;
+      }
 
-    .information p {
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
+      .information h1 {
+        font-size: 21px;
+        margin-bottom: 14px;
+      }
 
-    .records,
-    .gallery {
-      margin-top: 40px;
-    }
+      .information p {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
 
-    .gallery-grid {
-      grid-template-columns: 1fr;
+      .records,
+      .gallery {
+        margin-top: 40px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
     }
   }
 </style>
