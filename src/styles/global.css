@@ -13,8 +13,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 
-  background: #f0f0f0;
-  color: #333333;
+  background: #222222;
+  color: #999999;
   font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
   line-height: 1.8;
 }

@@ -1,3 +1,7 @@
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+
 <header class="header">
   <div class="container header-inner">
     <a href="/" class="logo">
@@ -9,10 +13,11 @@
 
 <style>
   .header {
-    color: #e4dede;
     background: #555555;
-    border-bottom: 0px solid #791313;
+    border-top: 10px solid #000000;
+    border-bottom: 1px solid #000000;
     margin-bottom: 20px; /* 下に20pxの余白を追加 */
+    padding: 0;
   }
 
   .header-inner {
@@ -30,14 +35,19 @@
   }
 
   .logo-main {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #dad9cc;
+    font-family: 'Yuji Boku', serif;
+    font-size: 1.8rem; /* 大きめに設定 */
+    letter-spacing: 0.05em; /* 文字の間隔を少し広げて堂々と見せる */
+    text-shadow: 3px 3px 0px #1f0e11; /* 祭りの赤（朱色）で影をつけて立体感を出す */
+    margin: 0;    
+    color: #eeeeee;
   }
 
   .logo-sub {
-    font-size: 1rem;
-    color: #ee2222;
+    font-family: 'Yuji Boku', serif;
+    font-size: 0.8rem;
+    color: #ff2222;
+    letter-spacing: 0.2em; /* 文字の間隔を少し広げて堂々と見せる */
   }
 
   nav {
