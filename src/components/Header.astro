@@ -1,31 +1,64 @@
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://googleapis.com" />
+<link rel="preconnect" href="https://gstatic.com" crossorigin />
+<link
+  href="https://googleapis.com/css2?family=Yuji+Boku&display=swap"
+  rel="stylesheet"
+/>
 
 <header class="header">
   <div class="container header-inner">
-    <a href="/" class="logo">
+    <!-- 左側：ロゴ画像 ＋ タイトル -->
+    <a href="/" class="logo-area">
+      <img src="/newlogo.png" alt="Logo" class="logo-img" />
       <span class="logo-main">コザ･てるりん祭 Archives</span>
-      <span class="logo-sub">⚠️構築中で内容は暫定⚠️</span>
     </a>
+
+    <!-- 右側：ナビゲーションリンク -->
+    <nav class="header-nav">
+      <a href="/" class="nav-link">
+        TOP
+      </a>
+      <a href="#footer" class="nav-link">
+        ASK
+      </a>
+      <a href="/about" class="nav-link">
+        ABOUT
+      </a>
+    </nav>
   </div>
 </header>
 
 <style>
   .header {
-    background: #555555;
-    border-top: 10px solid #000000;
-    border-bottom: 1px solid #000000;
-    margin-bottom: 20px; /* 下に20pxの余白を追加 */
+    background: #ece9e9;
+    border-top: 10px solid #444444;
+    border-bottom: 5px solid #555555;
+    margin-bottom: 1px;
     padding: 0;
   }
 
   .header-inner {
     min-height: 80px;
-    display: flex; /* コメントを解除して有効化 */
-    align-items: center; /* 上下の中央揃え */
-    justify-content: center; /* 左右の中央揃え */
-    text-align: center; /* 複数行になった時の文字の中央揃え */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 12px 8px;
+  }
+
+  .logo-area {
+    display: flex; /* 👈 これで横並びに */
+    align-items: center; /* 👈 上下の中央を揃える */
+    gap: 0px; /* 👈 ロゴと文字の間隔 */
+    text-decoration: none; /* 下線を消す */
+    color: inherit; /* 文字色を継承 */
+  }
+
+  .logo-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
   }
 
   .logo {
@@ -35,49 +68,53 @@
   }
 
   .logo-main {
-    font-family: 'Yuji Boku', serif;
-    font-size: 1.8rem; /* 大きめに設定 */
+    font-family: "Yuji Boku", serif;
+    font-size: 1.4rem; /* 大きめに設定 */
     letter-spacing: 0.05em; /* 文字の間隔を少し広げて堂々と見せる */
-    text-shadow: 3px 3px 0px #1f0e11; /* 祭りの赤（朱色）で影をつけて立体感を出す */
-    margin: 0;    
-    color: #eeeeee;
+    text-shadow: 1px 1px 3px #5e2d06; /* 祭りの赤（朱色）で影をつけて立体感を出す */
+    margin: 0;
+    color: #030101;
   }
 
-  .logo-sub {
-    font-family: 'Yuji Boku', serif;
-    font-size: 0.8rem;
-    color: #ff2222;
-    letter-spacing: 0.2em; /* 文字の間隔を少し広げて堂々と見せる */
-  }
-
-  nav {
+  /* 右側のリンクを横並びにする */
+  .header-nav {
     display: flex;
-    gap: 28px;
-    font-size: 14px;
+    gap: 16px;
+    align-self: flex-end; /* 👈 これで親の下端にピタッとくっつく */
+    margin-bottom: 1px; /* 下からの微調整用（必要に応じて） */
   }
 
-  nav a:hover {
-    color: #8a397e;
+  /* 各リンクのデザイン */
+  .nav-link {
+    text-decoration: none;
+    color: #334155;
+    font-size: 0.8rem;
+    font-family: "Yuji Boku", serif;
+    text-shadow: 1px 1px 3px #48448a;
+    margin: 0;
   }
 
   @media (max-width: 600px) {
-    .header {
-      margin-bottom: 0px; /* 下に20pxの余白を追加 */
+    .header-inner {
+      flex-direction: column; /* スマホでは縦並び */
+      align-items: flex-start; /* 👈 全体を左側に寄せる場合 */
+      justify-content: center;
+      gap: 0px;
+      font-family: "Yuji Boku", serif;
+      padding: 10px 0px 0px 0px; /* 👈 左右に少し隙間（12px）を開ける */
     }
 
-    .header-inner {
-      min-height: 50px;
-      flex-wrap: wrap;
-      padding: 1% 0;
+    /* 1段目のロゴとテキストのエリアを確実に左寄せにする */
+    .logo-area {
+      align-self: flex-start; /* 👈 これで左端に寄る */
     }
 
     .logo-main {
       font-size: 1.2rem;
     }
 
-    nav {
-      gap: 18px;
-      font-size: 12px;
+    .nav-link {
+      font-size: 0.7rem;
     }
   }
 </style>

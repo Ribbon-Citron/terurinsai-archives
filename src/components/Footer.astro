@@ -3,16 +3,18 @@ import SocialLinks from "./SocialLinks.astro";
 import { siteInfo } from "../data/site";
 ---
 
-<footer class="footer">
+<footer id="footer" class="footer">
   <div class="container">
     <SocialLinks />
 
-    <!-- <div class="contact">
-      <h2>お問い合わせ</h2>
-      <p>主催：{siteInfo.organizer}</p>
-      <p>住所：{siteInfo.address}</p>
-      <p>電話：{siteInfo.phone}</p>
-    </div> -->
+    <h2>お問い合わせ</h2>
+    <p>{siteInfo.organizer}</p>
+    <p>
+      {siteInfo.phone1}：{siteInfo.address1}
+    </p>
+    <p>
+      {siteInfo.phone2}：{siteInfo.address2}
+    </p>
 
     <div class="copyright">© てるりん祭実行委員会 2009</div>
   </div>
@@ -28,17 +30,17 @@ import { siteInfo } from "../data/site";
     margin-top: 20px;
   }
 
-  .contact {
-    margin-bottom: 20px;
+  .container {
+    margin: 0 0 0 1rem;
   }
 
-  .contact h2 {
-    font-size: 0.85rem;
+  .container h2 {
+    font-size: 1rem;
     margin-bottom: 1px;
   }
 
-  .contact p {
-    margin: 0;
+  .container p {
+    margin: 0 0 0 4px;
   }
 
   .copyright {
