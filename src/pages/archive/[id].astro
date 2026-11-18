@@ -15,7 +15,9 @@ const hasRecords =
   festival.visitors ||
   festival.weather ||
   festival.cashflow ||
-  festival.donation;
+  festival.donation ||
+  festival.description1 ||
+  festival.description2;
 ---
 
 <BaseLayout title={`${festival.title}｜コザ･てるりん祭`}>
@@ -36,14 +38,40 @@ const hasRecords =
         <br />
 
         {festival.performers.length > 0 && (
-          <p>出演者(50音順)：{festival.performers.join("、")}</p>
+          <p>
+            ■出演(読み仮名50音順)
+            <br />
+            {festival.performers.join(", ")}
+          </p>
         )}
         <br />
 
-        {festival.venue && <p>会場：{festival.venue}</p>}
+        {festival.venue && (
+          <p>
+            ■会場
+            <br />
+            {festival.venue}
+          </p>
+        )}
         <br />
 
-        {festival.description && <p>{festival.description}</p>}
+        {(festival.description1 || festival.description2) && (
+          <p>
+            ■運営
+            {festival.description1 && (
+              <>
+                <br />
+                {festival.description1}
+              </>
+            )}
+            {festival.description2 && (
+              <>
+                <br />
+                {festival.description2}
+              </>
+            )}
+          </p>
+        )}
         <br />
       </div>
     </div>
@@ -123,6 +151,7 @@ const hasRecords =
 
   .information {
     min-width: 0;
+    color: #fff;
   }
 
   .information h1 {
