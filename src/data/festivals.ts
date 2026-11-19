@@ -82,10 +82,10 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2026_pre1.jpg",
         "/pre/2026_pre2.jpg",
-        "/pre/2026_pre3.jpg",
+        "/pre/help.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2026.jpg"],
     };
   }
 
@@ -141,12 +141,12 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       cashflow: "---円 / ---円 (確認中)",
       donation: "確認中",
       additionalImages: [
-        "/pre/2025_pre1.jpg",
+        "/pre/help.jpg",
         "/pre/2025_pre2.jpg",
-        "/pre/2025_pre3.jpg",
+        "/pre/help.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleB.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2025.jpg"],
     };
   }
 
@@ -202,10 +202,10 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2024_pre1.jpg",
         "/pre/2024_pre2.jpg",
-        "/pre/2024_pre3.jpg",
+        "/pre/help.jpg",
       ],
-      additionalText: "説明：⚠️",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2024.jpg"],
     };
   }
 
@@ -259,13 +259,12 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       cashflow: "---円 / ---円 (確認中)",
       donation: "❓",
       additionalImages: [
-        "/pre/2020_pre1.jpg",
-        "/pre/2020_pre2.jpg",
-        "/pre/2020_radio.jpg",
-        "/pre/2020_children.jpg",
+        "/pre/2023_pre1.jpg",
+        "/pre/help.jpg",
+        "/pre/2023_children.jpg",
       ],
-      additionalText: "説明：子供てるりん祭10/14❓",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2023.jpg"],
     };
   }
 
@@ -321,11 +320,11 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2019_pre1.jpg",
         "/pre/2019_pre2.jpg",
+        "/pre/help.jpg",
         "/pre/2019_pre3.jpg",
-        "/pre/2019_pre4.jpg",
       ],
-      additionalText: "説明：⚠️",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2019.jpg"],
     };
   }
 
@@ -383,13 +382,11 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2018_pre1.jpg",
         "/pre/2018_pre2.jpg",
-        "/pre/2018_pre3.jpg",
-        "/pre/2018_pre4.jpg",
-        "/pre/2018_pre5.jpg",
-        "/pre/2019_children.jpg",
+        "/pre/help.jpg",
+        "/pre/help.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2018.jpg"],
     };
   }
 
@@ -441,12 +438,11 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2017_pre1.jpg",
         "/pre/2017_pre2.jpg",
-        "/pre/2017_pre3.jpg",
-        "/pre/2017_pre4.jpg",
+        "/pre/help.jpg",
         "/pre/2017_children.jpg",
       ],
-      additionalText: "説明：⚠️",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2017.jpg"],
     };
   }
 
@@ -503,8 +499,8 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "/pre/2016_pre4.jpg",
         "/pre/2016_radio.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2016.jpg"],
     };
   }
 
@@ -566,8 +562,8 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "/pre/2015_pre3.jpg",
         "/pre/2015_pre4.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2015.jpg"],
     };
   }
 
@@ -627,8 +623,8 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "/pre/2014_pre2.jpg",
         "/pre/2014_pre3.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2014.jpg"],
     };
   }
 
@@ -684,8 +680,8 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "/pre/2013_pre2.jpg",
         "/pre/2013_pre3.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2013.jpg"],
     };
   }
 
@@ -733,13 +729,13 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       donation: "❓",
       additionalImages: [
         "/pre/2012_pre1.jpg",
-        "/pre/2012_pre2.jpg",
+        "/pre/help.jpg",
         "/pre/2012_pre3.jpg",
         "/pre/2012_pre4.jpg",
         "/pre/2012_pre5.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2012.jpg"],
     };
   }
 
@@ -779,12 +775,11 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       cashflow: "---円 / ---円 (確認中)",
       donation: "❓",
       additionalImages: [
-        "/pre/2011_pre1.jpg",
+        "/pre/help.jpg",
         "/pre/2011_pre2.jpg",
-        "/pre/2011_pre3.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2011.jpg"],
     };
   }
 
@@ -825,12 +820,12 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       cashflow: "---円 / ---円 (確認中)",
       donation: "❓",
       additionalImages: [
-        "/pre/2010_pre1.jpg",
+        "/pre/help.jpg",
         "/pre/2010_pre2.jpg",
         "/pre/2010_pre3.jpg",
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2010.jpg"],
     };
   }
 
@@ -841,7 +836,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       year: "2009",
       date: "年 6月6日(土)",
       time: "14:00～21:00",
-      venue: "沖縄市 パルミラ通り",
+      venue: "沖縄市 パルミラ通り ～ 一番街",
       performers: [
         "新良幸人",
         "久場政行＆前粟蔵靖",
@@ -867,11 +862,10 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       cashflow: "---円 / ---円 (確認中)",
       donation: "❓",
       additionalImages: [
-        "/pre/2009_pre1.jpg",
-        "/pre/2009_pre2.jpg",
+        "/pre/help.jpg"
       ],
-      additionalText: "説明：",
-      gallery: ["/images/sampleC.jpg"],
+      additionalText: "　⚠️Info missing. Help us update!",
+      gallery: ["/gallery/2009.jpg"],
     };
   }
 
