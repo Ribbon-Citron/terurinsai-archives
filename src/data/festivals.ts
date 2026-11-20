@@ -82,9 +82,9 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2026_pre1.jpg",
         "/pre/2026_pre2.jpg",
-        "/pre/help.jpg",
+        "/pre/2026_pre3.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2026.jpg"],
     };
   }
@@ -141,11 +141,11 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       cashflow: "---円 / ---円 (確認中)",
       donation: "確認中",
       additionalImages: [
-        "/pre/help.jpg",
+        "/pre/2025_pre1.jpg",
         "/pre/2025_pre2.jpg",
-        "/pre/help.jpg",
+        "/pre/2025_pre3.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2025.jpg"],
     };
   }
@@ -202,9 +202,9 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       additionalImages: [
         "/pre/2024_pre1.jpg",
         "/pre/2024_pre2.jpg",
-        "/pre/help.jpg",
+        "/pre/2024_pre3.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2024.jpg"],
     };
   }
@@ -255,15 +255,15 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       description2:
         "後援：沖縄市, 沖縄市教育委員会, 沖縄市観光物産振興協会, コザ商店街連合, FMコザ, 株式会社ファンファーレ・ジャパン",
       visitors: "計測なし",
-      weather: "❓",
+      weather: "晴",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2023_pre1.jpg",
-        "/pre/help.jpg",
+        "/pre/2023_pre2.jpg",
         "/pre/2023_children.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2023.jpg"],
     };
   }
@@ -314,16 +314,16 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       description2:
         "後援：沖縄市, 琉球新報社, 沖縄タイムス社, 沖縄市センター商店街振興組合, コザ・インフォメーションセンター, まちづくりNPOコザまち社中, みやら製麺",
       visitors: "計測なし",
-      weather: "❓",
+      weather: "曇",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2019_pre1.jpg",
         "/pre/2019_pre2.jpg",
-        "/pre/help.jpg",
         "/pre/2019_pre3.jpg",
-      ],
-      additionalText: "　⚠️Info missing. Help us update!",
+        "/pre/2019_pre4.jpg",
+       ],
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2019.jpg"],
     };
   }
@@ -378,14 +378,14 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "晴",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2018_pre1.jpg",
         "/pre/2018_pre2.jpg",
-        "/pre/help.jpg",
-        "/pre/help.jpg",
+        "/pre/2018_pre3.jpg",
+        "/pre/2018_pre4.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2018.jpg"],
     };
   }
@@ -434,14 +434,14 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "晴",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2017_pre1.jpg",
         "/pre/2017_pre2.jpg",
-        "/pre/help.jpg",
+        "/pre/2017_pre3.jpg",
         "/pre/2017_children.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2017.jpg"],
     };
   }
@@ -491,7 +491,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "曇/晴",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2016_pre1.jpg",
         "/pre/2016_pre2.jpg",
@@ -499,7 +499,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "/pre/2016_pre4.jpg",
         "/pre/2016_radio.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2016.jpg"],
     };
   }
@@ -555,14 +555,14 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "晴/雨",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2015_pre1.jpg",
         "/pre/2015_pre2.jpg",
         "/pre/2015_pre3.jpg",
         "/pre/2015_pre4.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2015.jpg"],
     };
   }
@@ -617,13 +617,13 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "晴/雨",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2014_pre1.jpg",
         "/pre/2014_pre2.jpg",
         "/pre/2014_pre3.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2014.jpg"],
     };
   }
@@ -674,13 +674,13 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "雨",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2013_pre1.jpg",
         "/pre/2013_pre2.jpg",
         "/pre/2013_pre3.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2013.jpg"],
     };
   }
@@ -698,26 +698,26 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "上原知子",
         "大城美佐子",
         "島袋辰也",
-        "シャンピン",
+        "シャンピン(カラハーイユニット)",
         "園田青年会",
         "大工哲弘",
         "玉栄政昭",
-        "❓チアキ",
+        "チアキ",
         "知名定男",
         "知念こずえ",
-        "❓照屋林賢",
+        "照屋林賢",
         "徳里隆行",
         "仲宗根創",
-        "❓名嘉睦稔",
+        "名嘉睦稔",
         "仲本興次",
-        "❓光",
+        "光",
         "前川守賢",
         "松田一利",
-        "❓宮沢和史",
+        "宮沢和史",
         "よなは徹",
         "饒辺愛子",
         "玉城満(司会)",
-        "❓藤木勇人(司会)",
+        "藤木勇人(司会)",
       ],
       description1:
         "主催：パルミラ通り会, コザ商店街連合会, てるりん祭実行委員会",
@@ -726,15 +726,15 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "雨",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
         "/pre/2012_pre1.jpg",
-        "/pre/help.jpg",
+        "/pre/2012_pre2.jpg",
         "/pre/2012_pre3.jpg",
         "/pre/2012_pre4.jpg",
         "/pre/2012_pre5.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2012.jpg"],
     };
   }
@@ -773,12 +773,12 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "雨",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
-        "/pre/help.jpg",
+        "/pre/2011_pre1.jpg",
         "/pre/2011_pre2.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2011.jpg"],
     };
   }
@@ -790,7 +790,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       year: "2010",
       date: "年 4月4日(日)",
       time: "14:00～21:00",
-      venue: "沖縄市 パルミラ通り",
+      venue: "沖縄市 パルミラ通り ➡ 一番街商店街",
       performers: [
         "嘉手苅林次",
         "久場政行＆前粟蔵靖",
@@ -800,6 +800,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "ディアマンテス",
         "照屋林賢",
         "仲地のぶひで",
+        "仲西ゆうしん",
         "名嘉睦稔",
         "仲本興次",
         "西泊喜則",
@@ -818,13 +819,13 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "曇",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
-        "/pre/help.jpg",
+        "/pre/2010_pre1.jpg",
         "/pre/2010_pre2.jpg",
         "/pre/2010_pre3.jpg",
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2010.jpg"],
     };
   }
@@ -860,11 +861,11 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       visitors: "計測なし",
       weather: "晴",
       cashflow: "---円 / ---円 (確認中)",
-      donation: "❓",
+      donation: "",
       additionalImages: [
-        "/pre/help.jpg"
+        "/pre/2009_pre.jpg"
       ],
-      additionalText: "　⚠️Info missing. Help us update!",
+      additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2009.jpg"],
     };
   }

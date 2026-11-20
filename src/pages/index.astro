@@ -5,7 +5,7 @@ import { festivals } from "../data/festivals";
 
 <BaseLayout>
   <section class="container section">
-    <div class="section-title">⚠️Under construction⚠️</div>
+    <!-- <div class="section-title">Performers, Posters, Photos and Datas from the festival</div> -->
     <div class="festival-grid">
       {festivals.map((festival) => (
         <a href={`/archive/${festival.id}/`} class="festival-card">
@@ -25,20 +25,23 @@ import { festivals } from "../data/festivals";
   .section-title {
     text-align: center;
     letter-spacing: 0.01em;
-    font-size: 1rem;
-    color: #ddd2d2;
+    font-size: 0.8rem;
+    color: #999;
+    font-family: 'Playfair Display', serif;
+    /* font-family: 'Poppins', sans-serif; */
   }
 
   .festival-grid {
     display: grid;
     grid-template-columns: repeat(5, 160px);
     justify-content: center;
-    gap: 20px 10px;
+    gap: 20px 20px;
+    margin-top: 20px; /* ← グリッドの上に20pxの隙間を追加 */
   }
 
   .festival-card {
     width: 160px;
-    min-width: 0;
+    min-width: 0px;
   }
 
   .poster {
@@ -70,13 +73,14 @@ import { festivals } from "../data/festivals";
   @media (max-width: 600px) {
     .section-title {
       text-align: center;
-      font-size: 1rem;
-      color: #555;
+      font-size: 0.7rem;
+      color: #aaa;
     }
     .festival-grid {
       grid-template-columns: repeat(2, 160px);
       justify-content: center;
-      gap: 20px 10px;
+      gap: 20px 12px;
+      margin-top: 0px; /* ← グリッドの上に0pxの隙間を追加 */
     }
 
     .festival-card {
@@ -84,15 +88,15 @@ import { festivals } from "../data/festivals";
     }
 
     .festival-card h3 {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 
   @media (min-width: 601px) and (max-width: 900px) {
     .section-title {
       text-align: center;
-      font-size: 0.9rem;
-      color: #555;
+      font-size: 0.8rem;
+      color: #aaa;
     }
     .festival-grid {
       grid-template-columns: repeat(4, 160px);

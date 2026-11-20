@@ -19,7 +19,7 @@
         TOP
       </a>
       <a href="#footer" class="nav-link">
-        ASK
+        CONTACT
       </a>
       <a href="/about" class="nav-link">
         ABOUT
@@ -48,9 +48,9 @@
   }
 
   .logo-area {
-    display: flex; /* 👈 これで横並びに */
-    align-items: center; /* 👈 上下の中央を揃える */
-    gap: 0px; /* 👈 ロゴと文字の間隔 */
+    display: flex; /* これで横並びに */
+    align-items: center; /* 上下の中央を揃える */
+    gap: 0px; /* ロゴと文字の間隔 */
     text-decoration: none; /* 下線を消す */
     color: inherit; /* 文字色を継承 */
   }
@@ -71,7 +71,7 @@
     font-family: "Yuji Boku", serif;
     font-size: 1.4rem; /* 大きめに設定 */
     letter-spacing: 0.05em; /* 文字の間隔を少し広げて堂々と見せる */
-    text-shadow: 1px 1px 3px #5e2d06; /* 祭りの赤（朱色）で影をつけて立体感を出す */
+    text-shadow: 1px 1px 3px #5e2d06; /* 祭りの朱色で影をつけて立体感を出す */
     margin: 0;
     color: #030101;
   }
@@ -80,7 +80,7 @@
   .header-nav {
     display: flex;
     gap: 16px;
-    align-self: flex-end; /* 👈 これで親の下端にピタッとくっつく */
+    align-self: flex-end; /* これで親の下端にピタッとくっつく */
     margin-bottom: 1px; /* 下からの微調整用（必要に応じて） */
   }
 
@@ -97,16 +97,16 @@
   @media (max-width: 600px) {
     .header-inner {
       flex-direction: column; /* スマホでは縦並び */
-      align-items: flex-start; /* 👈 全体を左側に寄せる場合 */
+      align-items: flex-start; /* 全体を左側に寄せる場合 */
       justify-content: center;
       gap: 0px;
       font-family: "Yuji Boku", serif;
-      padding: 10px 0px 0px 0px; /* 👈 左右に少し隙間（12px）を開ける */
+      padding: 10px 0px 0px 0px; /* 左右に少し隙間を開ける */
     }
 
     /* 1段目のロゴとテキストのエリアを確実に左寄せにする */
     .logo-area {
-      align-self: flex-start; /* 👈 これで左端に寄る */
+      align-self: flex-start; /* これで左端に寄る */
     }
 
     .logo-main {
@@ -114,7 +114,7 @@
     }
 
     .nav-link {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
   }
 </style>

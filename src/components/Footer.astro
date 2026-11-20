@@ -7,14 +7,10 @@ import { siteInfo } from "../data/site";
   <div class="container">
     <SocialLinks />
 
-    <h2>お問い合わせ</h2>
-    <p>{siteInfo.organizer}</p>
-    <p>
-      {siteInfo.phone1}：{siteInfo.address1}
-    </p>
-    <p>
-      {siteInfo.phone2}：{siteInfo.address2}
-    </p>
+    <h2></h2>
+    <!-- <p>{siteInfo.organizer}</p> -->
+    <p>{siteInfo.address1} {siteInfo.phone1}・
+    {siteInfo.address2} {siteInfo.phone2}</p>
 
     <div class="copyright">© てるりん祭実行委員会 2009</div>
   </div>
@@ -25,7 +21,7 @@ import { siteInfo } from "../data/site";
     background: #555555;
     border-top: 3px solid #791313;
     padding: 0;
-    color: #f0e6e6;
+    color: #ccc;
     font-size: 0.8rem;
     margin-top: 20px;
   }
@@ -38,14 +34,15 @@ import { siteInfo } from "../data/site";
 
   .container h2 {
     font-size: 1rem;
-    margin-bottom: 2px;
-    margin: 0 0 0 5rem;
+    margin: 30px 0 1px 0;
+    text-align: center;
   }
 
   .container p {
     font-size: 0.8rem;
     margin-bottom: 0px;
-    margin: 0 0 0 6rem;
+    margin: 0px 0 0 0px;
+    text-align: center;
   }
 
   .copyright {
@@ -53,8 +50,8 @@ import { siteInfo } from "../data/site";
     color: #ccc;
     padding: 4px 0 10px 0;
     border-top: 1px solid #888;
-    margin-top: 4px;
-    font-size: 0.8rem;
+    margin-top: 15px;
+    font-size: 0.75rem;
     text-align: center;
   }
 </style>
