@@ -33,6 +33,16 @@ import { siteInfo } from "../data/site";
       <p>電話：{siteInfo.phone}</p>
     </section> -->
 
+    <div class="map-section">
+  <h2>開催エリア</h2>
+
+<iframe
+  src="https://www.google.com/maps/d/u/0/embed?mid=1_7XP7us9tRArNj2WFE69zMSWi_DLoFI&ehbc=2E312F&noprof=1"
+  width="640"
+  height="480"
+></iframe>
+</div>
+
     <a href="/" class="back-link">
       開催記録一覧へ戻る
     </a>
@@ -73,6 +83,26 @@ import { siteInfo } from "../data/site";
     color: #eee;
     text-decoration: underline;
   }
+
+.map-section {
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
+.map-section h2 {
+  font-size: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.map-section iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+  border-radius: 8px;
+}
 
   /* @media (max-width: 600px) {
     .about {
