@@ -10,19 +10,26 @@ import { siteInfo } from "../data/site";
     <section>
       <h2>祭りの趣旨</h2>
       <p>
-        コザ・てるりん祭は、沖縄の音楽・芸能・文化に功績を残した照屋林助(愛称：てるりん)や
+        <!-- コザ・てるりん祭は、沖縄の音楽・芸能・文化に功績を残した照屋林助(愛称：てるりん)や
         諸先輩方を偲び、感謝の気持ちをこめ、継承していく為に、
         また地域活性のためにコザの街を盛り上げていこうという目的で、
         照屋林助の次男・林次郎が企画し、賛同するアーティストと仲間により運営、開催しています。
         毎年「てるりん」に縁ある沖縄を代表する芸能家・音楽家の方々にご出演いただき、
         ご来場の皆様、出演者、コザ・てるりん祭に関わるすべての人に、
-        素敵な時間をお届けできるよう、精一杯楽しんで準備・開催しています。
+        素敵な時間をお届けできるよう、精一杯楽しんで準備・開催しています。 -->
+
+        コザ・てるりん祭は沖縄の音楽や芸能,文化に大きな足跡を残した照屋林助(愛称：てるりん)と
+        沖縄の芸能を築いてきた先輩方への感謝を込めて開催しているお祭りです。
+        その想いを次の世代へつなぎ、コザの街をもっと元気にしたい。
+        そんな願いから照屋林助の次男・林次郎が企画し趣旨に賛同するアーティストや仲間たちとともに運営しています。
+        毎年、てるりんゆかりの沖縄を代表する芸能家や音楽家の皆さんを迎え出演者も来場者も
+        祭りに関わるすべての人が楽しめる時間を目指しています。
       </p>
     </section>
 
     <section>
       <h2>企画・開催</h2>
-      <p>企画：照屋林次郎 (照屋林助の次男)</p>
+      <p>企画：照屋林次郎</p>
       <p>主催：{siteInfo.organizer}</p>
       <p>会場：沖縄市中央・中央パークアベニューなど</p>
     </section>
@@ -34,14 +41,13 @@ import { siteInfo } from "../data/site";
     </section> -->
 
     <div class="map-section">
-  <h2>開催エリア</h2>
-
-<iframe
-  src="https://www.google.com/maps/d/u/0/embed?mid=1_7XP7us9tRArNj2WFE69zMSWi_DLoFI&ehbc=2E312F&noprof=1"
-  width="640"
-  height="480"
-></iframe>
-</div>
+      <h2>開催エリア</h2>
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1_7XP7us9tRArNj2WFE69zMSWi_DLoFI&ehbc=2E312F&noprof=1"
+        width="640"
+        height="480"
+      ></iframe>
+    </div>
 
     <a href="/" class="back-link">
       開催記録一覧へ戻る
@@ -58,7 +64,7 @@ import { siteInfo } from "../data/site";
 
   h1 {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   section {
@@ -67,12 +73,13 @@ import { siteInfo } from "../data/site";
 
   h2 {
     font-size: 1rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 18px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
   }
 
   p {
+    font-size: 0.9rem;
     line-height: 1.4;
     margin: 0 0 0 4px;
   }
@@ -84,35 +91,35 @@ import { siteInfo } from "../data/site";
     text-decoration: underline;
   }
 
-.map-section {
-  margin-top: 64px;
-  margin-bottom: 32px;
-}
+  .map-section {
+    margin-top: 38px;
+    margin-bottom: 32px;
+  }
 
-.map-section h2 {
-  font-size: 1rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-}
+  .map-section h2 {
+    font-size: 1rem;
+    border-bottom: 1px solid #999;
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+  }
 
-.map-section iframe {
-  display: block;
-  width: 100%;
-  height: 480px;
-  border: 0;
-  border-radius: 8px;
-}
+  .map-section iframe {
+    display: block;
+    width: 100%;
+    height: 480px;
+    border: 0;
+    border-radius: 8px;
+  }
 
   /* @media (max-width: 600px) {
-    .about {
-      padding-top: 32px;
-    }
+      .about {
+        padding-top: 32px;
+      }
 
-    h1 {
-      font-size: 1rem;
-      margin-bottom: 32px;
+      h1 {
+        font-size: 1rem;
+        margin-bottom: 32px;
+      }
     }
-  }
-   */
+     */
 </style>

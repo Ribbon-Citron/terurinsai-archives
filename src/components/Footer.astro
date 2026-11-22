@@ -9,8 +9,10 @@ import { siteInfo } from "../data/site";
 
     <h2></h2>
     <!-- <p>{siteInfo.organizer}</p> -->
-    <p>{siteInfo.address1} {siteInfo.phone1}・
-    {siteInfo.address2} {siteInfo.phone2}</p>
+    <p>
+      {siteInfo.address1} {siteInfo.phone1}・{siteInfo.address2}{" "}
+      {siteInfo.phone2}
+    </p>
 
     <div class="copyright">© てるりん祭実行委員会 2009</div>
   </div>
@@ -26,7 +28,7 @@ import { siteInfo } from "../data/site";
     margin-top: 20px;
   }
 
-.container {
+  .container {
     width: 100%;
     margin: 0px auto;
     padding: 0px 0px 4px 0px;
@@ -46,7 +48,7 @@ import { siteInfo } from "../data/site";
   }
 
   .copyright {
-    width: 100%; 
+    width: 100%;
     color: #ccc;
     padding: 4px 0 10px 0;
     border-top: 1px solid #888;

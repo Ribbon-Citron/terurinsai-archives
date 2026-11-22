@@ -322,7 +322,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
         "/pre/2019_pre2.jpg",
         "/pre/2019_pre3.jpg",
         "/pre/2019_pre4.jpg",
-       ],
+      ],
       additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2019.jpg"],
     };
@@ -774,10 +774,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       weather: "雨",
       cashflow: "---円 / ---円 (確認中)",
       donation: "",
-      additionalImages: [
-        "/pre/2011_pre1.jpg",
-        "/pre/2011_pre2.jpg",
-      ],
+      additionalImages: ["/pre/2011_pre1.jpg", "/pre/2011_pre2.jpg"],
       additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2011.jpg"],
     };
@@ -862,9 +859,7 @@ export const festivals: Festival[] = Array.from({ length: 15 }, (_, index) => {
       weather: "晴",
       cashflow: "---円 / ---円 (確認中)",
       donation: "",
-      additionalImages: [
-        "/pre/2009_pre.jpg"
-      ],
+      additionalImages: ["/pre/2009_pre.jpg"],
       additionalText: "Info missing. Help us update!",
       gallery: ["/gallery/2009.jpg"],
     };
